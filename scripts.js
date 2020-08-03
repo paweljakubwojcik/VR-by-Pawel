@@ -1,5 +1,5 @@
-import * as THREE from './node_modules/three/build/three.module.js';
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+// import * as THREE from './node_modules/three/build/three.module.js';
+// import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
 
 var scene = new THREE.Scene();
 var aspectRatio = window.innerWidth / window.innerHeight;
@@ -87,7 +87,6 @@ for (var i = 0; i < options.length; i++) {
     
     options[i].addEventListener('click', function () {
         let index = this.classList[0];
-        console.log(index);
         for (const box of skyboxes)
             scene.remove(box);
         scene.add(skyboxes[index]);
